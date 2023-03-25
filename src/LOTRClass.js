@@ -2,6 +2,11 @@ import axios from "axios";
 import LOTRClassError from "./LOTRClassError.js";
 import * as constants from "./constants.js";
 
+/**
+ * This is an SDK for interacting with the Lord of the Rings API.
+ * More information about this API can be found at https://the-one-api.dev/v2.
+ * - Setup an account to get your token https://the-one-api.dev/account.
+ */
 export default class LOTRClass {
   constructor(token = null) {
     this.token = token;
