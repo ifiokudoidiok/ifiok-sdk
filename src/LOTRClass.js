@@ -12,6 +12,9 @@ export default class LOTRClass {
     this.token = token;
   }
 
+  /**
+   * @returns All the Lord of the Rings movies.
+   */
   async getAllMovies() {
     let config = {
       headers: {
@@ -37,6 +40,11 @@ export default class LOTRClass {
     return { movies: response.data.docs, total: response.data.total };
   }
 
+  /**
+   * @param id This is the id of the movie to retrieve.
+   *
+   * @returns An object with details of one of the Lord of the Rings movie with the specified id.
+   */
   async getMovieById(id) {
     let config = {
       headers: {
@@ -65,6 +73,11 @@ export default class LOTRClass {
     return response.data;
   }
 
+  /**
+   *  @param id - This is the id of the movie with quotes to retrieve.
+   *
+   * @returns Lord of the Rings movie quotes found in the movie with the specified id.
+   */
   async getQuotesByMovieId(id) {
     let config = {
       headers: {
